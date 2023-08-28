@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: head ;
+    src: url(/Heading-Now-Variable.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+#main {
+    /* height: 100vh;
+    width: 100%; */
+    font-family: 'Montserrat';
+}
+
+#cursur{
+    position: fixed;
+    height: 2vw;
+    width: 2vw;
+    background-color: salmon;
+    border-radius: 50%;
+    z-index: 10;
+    border: 3px solid darkblue;
+    
+}
+
+
+#loader{
+    height: 100vh;
+    width: 100%;
+    background-color: #d6e1e0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+#loader h1{
+    font-family: 'Montserrat';
+    font-size: 3vw;
+    color: black;
+}
+
+i{
+    display: none;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: black;  
+    position: relative;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: blue;  
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 4vw; 
+    align-items: center;
+    position: relative;
+}
+
+nav>h1{
+    color: white;
+    font-size: 3vw;
+}
+nav>h1:hover{
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    gap: 3vw;
+    padding: vw 0vw;
+}
+.menu h3{
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 500;
+    padding: 0.5vw 0vw;
+}
+.menu h3:hover{
+    opacity: 1;
+    transition: 1s all;
+    cursor: pointer;
+    color: lightsteelblue;
+    border-bottom: 1px solid lightsteelblue;
+}
+/* SECTION STARTS HERE/ */
+
+.section{
+    display: flex;
+    overflow: hidden;
+    height: 88%;
+    align-items: center;
+    padding: 0vw 3vw;
+}
+.section h1{
+    color: transparent;
+    /* font-size: 43vw; */
+    font-stretch: 340%;
+    font-family: head;
+    white-space: nowrap;
+    font-size: 38vw;
+    /* -webkit-text-stroke: 5px #191d19;; */
+    -webkit-text-stroke: 5px #9c9a9d;
+}
+
+#page1 video{
+    width: 100%;
+    /* border: 2px solid yellow; */
+    padding: 10px 0px;
+}
+
+
+/* PAGE 2 STARTS HERE/
+ */
+
+ #page2{
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+    justify-content: space-between;
+    background-color: black;
+    overflow: hidden;
+ }
+
+ #page2 .box1{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding: 2vw 3vw;
+ }
+ #page2 .box2{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 3vw;
+ }
+
+ .box1 h1{
+    font-size: 6vw;
+    line-height: 5vw;
+    TEXT-ALIGN: start;
+ }
+ .box2 h1{
+    font-size: 5vw;
+    line-height: 4vw;
+    TEXT-ALIGN: end;
+ }
+ .box1 .div2{
+    position: absolute;
+    left: 25vw;
+    top: 9vw;
+ }
+
+
+ /* RESPONSIVNESS */
+
+ @media screen and (max-width: 650px) {
+    i{
+        display: block;
+        color: white;
+        position: absolute;
+        right: 4%;
+        font-size: 3.5vw;
+    }
+
+    .menu {
+        display: flex;
+        gap: 5vw;
+        flex-direction: column;
+        position: absolute;
+        background-color: aliceblue;
+        width: 34vw;
+        top: 0%;
+        left: -41%;
+        z-index: 1;
+        height: 100vh;
+        align-items: center;
+        padding: 13vh 2vw;
+        transition: 1s all ease-in-out;
+    }
+
+    .menu h3 {
+        color: black;
+        font-size: 2vw;
+        font-weight: 600;
+    }
+
+    nav{
+        justify-content: center;
+    }
+    nav>h1{
+        font-size: 5vw;
+    }
+    .div2 p{
+        font-size: 2vw;
+    }
+}
